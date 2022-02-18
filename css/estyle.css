@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    margin-top: 10px;
+    background-image: linear-gradient(45deg, black, MediumBlue);
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Estilização do corpo principal da página*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;        /*Garante que os elementos irão ficar um em baixo do outro*/
+    flex-direction: column;
+}
+
+/*Estilização da imagem*/
+#imagem{
+    background-image: url("../img/img1.png");
+    width: 234px;
+    height: 272px;
+    background-repeat: no-repeat;
+}
+
+/*Estilização do campo onde o usuário insere as letras*/
+#palavra-secreta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin: 25px auto;
+}
+/*Estilização das letras do campo onde o usuário insere as letras*/
+.letras{
+    /*width: 16px;*/
+    width: 16px;
+    text-align: center;
+    border-bottom: 2px solid Cyan;
+    color: #ffffff;
+    margin: auto 5px;
+}
+
+
+/*Estilização do teclado do usuário*/
+
+#teclado{
+    margin: 30px;
+}
+.teclas button{
+    width: 20px;
+    height: 24px;
+    margin: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 8px #4F4F4F;    /*Da uma sombreada nas bordas do botão*/
+    border-radius: 5px;
+    border: 1px solid #4F4F4F;
+    color: MediumBlue;
+    font-size: 15px;
+    font-weight: 780;
+}
+.teclas button:disabled{        /*Desabilita o cursor*/
+    cursor: not-allowed;
+}
+.teclas button:hover{
+    transform: scale(1.3);      /*Quando passa o mouse por cima do elemento ele aumenta o tamanho*/
+}
+
+#categoria{
+    margin-top: 10px;
+    color: Cyan;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+@media (min-width: 357px){
+    .teclas button{
+        width: 25px;
+        height: 25px;
+    }
+    #categoria{
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 402px){
+    .teclas button{
+        width: 30px;
+        height: 30px;
+    }
+    #palavra-secreta{
+        font-size: 1.3em;
+    }
+    .letras{
+        width: 18px;
+    }
+
+    #categoria{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 456px){
+    .teclas button{
+        width: 36px;
+        height: 36px;
+    }
+    #palavra-secreta{
+        font-size: 1.5em;
+    }
+    .letras{
+        width: 20px;
+    }
+
+    #categoria{
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 768px){
+    .teclas button{
+        width: 68px;
+        height: 68px;
+        font-size: 2em;
+    }
+    #palavra-secreta{
+        font-size: 2.5em;
+    }
+    .letras{
+        width: 35px;
+    }
+
+    #categoria{
+        font-size: 2em;
+    }
+}
